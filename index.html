@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Aarunya</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="#" class="logo">🌿 Aarunya</a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#createBlog">Create</a></li>
+                <li><a href="#blogContainer">Blogs</a></li>
+            </ul>
+        </nav>
+
+        <button id="themeToggle" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+
+        <section class="hero">
+
+            <h2>Where Thoughts Find Their Voice.</h2>
+
+            <p>
+                Share your stories , ideas , experiences,
+                and inspire people around the world.
+            </p>
+
+            <button onclick="document.getElementById('createBlog').scrollIntoView({behavior:'smooth'})">
+                Start Writing
+            </button>
+
+        </section>
+
+        <section id="createBlog" class="blog-form">
+
+            <h2>Create a Blog</h2>
+
+            <input
+                 type="text"
+                 id="title"
+                 placeholder="Enter Blog Title">
+
+            <textarea
+                 id="content"
+                 maxlength="500"
+                 placeholder="Write your thoughts here..."></textarea>
+
+                 <div class="character-counter">
+                    <span id="charCount">0</span> / 500 Characters
+                 </div>
+
+                 <button id="publishBtn">
+                    Publish Blog
+                 </button>
+        </section>
+
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search blogs...">
+
+        </div>
+        <div class="blog-info">
+            <h3 id="blogCount">
+                Total Blogs : 0
+            </h3>
+
+            <button id="downloadPdf" class="pdf-btn">
+                📄 Export PDF
+            </button>
+        </div>
+
+        <section id="blogContainer">
+
+        </section>
+
+        <footer>
+
+            <p>
+                &copy; 2026 Aarunya. All Rights Reserved.
+            </p>
+        </footer>
+
+        <div id="toast"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
